@@ -1,16 +1,16 @@
-var express = require('express');
+const express = require('express');
 require('express-async-errors');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var indexRoutes = require('./routes/indexRoutes');
-var APIRoutes = require('./routes/apiRoutes');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const indexRoutes = require('./routes/indexRoutes');
+const APIRoutes = require('./routes/apiRoutes');
 const errorHandler = require('./middlewares/errorHandler');
 //user defined db connection
 const connectDB = require('./config/mongoose');
 connectDB();
 
-var app = express();
+const app = express();
 
 
 
