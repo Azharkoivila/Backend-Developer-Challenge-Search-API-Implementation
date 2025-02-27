@@ -1,5 +1,6 @@
 const express = require('express');
 require('express-async-errors');
+require('dotenv').config();
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -27,5 +28,4 @@ app.use('/api/v1/', APIRoutes);
 const notFoundRoute = require('./routes/404Route');
 app.use(notFoundRoute);
 app.use(errorHandler);
-
 module.exports = app;
